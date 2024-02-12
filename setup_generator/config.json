@@ -1,0 +1,44 @@
+{
+    "prompts": {
+        "name": {
+            "text": "Package name",
+            "default": ""
+        },
+        "version": {
+            "text": "Version",
+            "default": "1.0.0"
+        },
+        "description": {
+            "text": "Description",
+            "default": ""
+        },
+        "author": {
+            "text": "Author",
+            "default": ""
+        },
+        "author_email": {
+            "text": "Author email",
+            "default": ""
+        },
+        "install_requires": {
+            "text": "Dependencies (comma-separated)",
+            "default": "''"
+        },
+        "url": {
+            "text": "Project URL",
+            "default": ""
+        },
+        "license": {
+            "text": "License",
+            "default": ""
+        },
+        "script_args": {
+            "text": "Script arguments (comma-separated)",
+            "default": "''"
+        },
+        "zip_safe": {
+            "text": "Is the package zip safe?",
+            "default": false
+        }
+    }
+}
