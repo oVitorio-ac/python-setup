@@ -92,7 +92,7 @@ class SetupGenerator:
             zip_safe={user_info['zip_safe']}
         )
         """
-        return setup_py_content
+        return setup_py_content.replace('\033[32m', '').replace('\033[0m', '')
 
     def save_setup_py(self, setup_py_content, filename='setup.py'):
         """
@@ -109,12 +109,12 @@ class SetupGenerator:
             setup_file.write(setup_py_content)
 
 
-def load_config(config_path='setup_generator\config.json'):
+def load_config():
     """
     Load the configuration from the specified path.
 
     :param config_path: The path to the configuration file (default is 'setup_generator\config.json').
     :return: The loaded configuration.
     """
-    with open(config_path, 'r', encoding="utf-8") as config_file:
+    with open(os.path.join('setup_generator', 'config.json'), 'r', encoding="utf-8") as config_file:
         return json.load(config_file)
